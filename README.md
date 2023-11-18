@@ -1,37 +1,21 @@
-<!-- Relative Links -->
-[project-name]: Forensickle
-[top]: #top
-[`LICENSE.txt`]: LICENSE
-
 <a name="top"></a>
 
 <!-- PROJECT LOGO -->
 ![Forensicle: Digitial Forensics Data Harvesting](/images/logo.svg)
-<!--
-<br />
-<div align="center">
-  <a href="https://github.com/finnoybu/forensickle">
-    <img src="images/logo.svg" alt="Logo" width="500">
-  </a>
-  
-
-<h3 style="color: #00cc66" align="center">Digital Forensics Data Harvesting</h3>
-</div>
-<br />
--->
 
 <!-- TABLE OF CONTENTS -->
 <details>
 <summary>Table of Contents</summary>
 
 + [About The Project](#about-the-project)
-+ [Getting Started](#getting-started)
-+ [Usage](#usage)
-+ [Roadmap](#roadmap)
-+ [Contributing](#contributing)
++ [Key Features](#key-features)
++ Getting Started
++ Usage
++ Roadmap
++ Contributing
 + [License](#license)
-+ [Contact](#contact)
-+ [Acknowledgments](#acknowledgments)
++ Contact
++ Acknowledgments
 </details>
 
 
@@ -62,7 +46,10 @@
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [`LICENSE.txt`] for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
 ***
 [[top]]
+
+<!-- Relative Links -->
+[top]: #top
