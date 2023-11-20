@@ -1,5 +1,5 @@
 import sys
-from modules.admin import is_admin, run_as_admin
+from modules.admin2 import is_admin, run_as_admin
 
 
 def main():
@@ -22,4 +22,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # input()
+    input()
