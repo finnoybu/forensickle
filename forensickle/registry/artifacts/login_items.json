@@ -1,0 +1,23 @@
+{
+  "artifact_id": "login_items",
+  "display_name": "Login Items",
+  "category": "Persistence & Autostart",
+  "description": "macOS login items that automatically launch applications when a user logs in.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/com.apple.backgroundtaskmanagementagent/backgrounditems.btm"
+      ],
+      "module": "login_items",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "artifact_id": "network_connections",
+  "display_name": "Network Connections",
+  "category": "Network & Connections",
+  "description": "Live snapshot of active network connections including local and remote addresses, ports, and owning processes.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "network_connections",
+      "source_type": "live_data"
+    },
+    "macos": {
+      "source_paths": [],
+      "module": "network_connections",
+      "source_type": "live_data"
+    },
+    "linux": {
+      "source_paths": [],
+      "module": "network_connections",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "system_state"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "artifact_id": "dns_cache",
+  "display_name": "DNS Cache",
+  "category": "Network & Connections",
+  "description": "Windows DNS resolver cache containing recently resolved domain names and their IP addresses.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "dns_cache",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "browser_activity"
+  ]
+}

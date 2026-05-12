@@ -1,0 +1,25 @@
+{
+  "artifact_id": "defender_logs",
+  "display_name": "Windows Defender Logs",
+  "category": "Logs & Audit Trail",
+  "description": "Windows Defender scan results, detection history, and quarantined threat metadata.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%PROGRAMDATA%\\Microsoft\\Windows Defender\\Scans\\History\\Service\\DetectionHistory\\*\\*",
+        "%PROGRAMDATA%\\Microsoft\\Windows Defender\\Support\\MPLog-*"
+      ],
+      "module": "defender_logs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "anti_forensics",
+    "system_state"
+  ]
+}

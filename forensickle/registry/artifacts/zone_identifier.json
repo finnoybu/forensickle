@@ -1,0 +1,25 @@
+{
+  "artifact_id": "zone_identifier",
+  "display_name": "Zone Identifier (Mark of the Web)",
+  "category": "Browser & Web Activity",
+  "description": "NTFS alternate data streams marking files downloaded from the internet with source URL and zone information.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\Downloads\\*:Zone.Identifier",
+        "%USERPROFILE%\\Desktop\\*:Zone.Identifier"
+      ],
+      "module": "zone_identifier",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "browser_activity",
+    "file_download",
+    "file_access"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "artifact_id": "hosts_file",
+  "display_name": "Hosts File",
+  "category": "Network & Connections",
+  "description": "System hosts file containing static hostname-to-IP mappings that override DNS resolution.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\drivers\\etc\\hosts"
+      ],
+      "module": "hosts_file",
+      "source_type": "file"
+    },
+    "macos": {
+      "source_paths": [
+        "/etc/hosts"
+      ],
+      "module": "hosts_file",
+      "source_type": "file"
+    },
+    "linux": {
+      "source_paths": [
+        "/etc/hosts"
+      ],
+      "module": "hosts_file",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "configuration"
+  ]
+}

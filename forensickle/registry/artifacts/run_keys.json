@@ -1,0 +1,24 @@
+{
+  "artifact_id": "run_keys",
+  "display_name": "Run Keys",
+  "category": "Persistence & Autostart",
+  "description": "Windows registry Run and RunOnce keys that execute programs at user logon or system startup.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\NTUSER.DAT",
+        "%SYSTEMROOT%\\System32\\config\\SOFTWARE"
+      ],
+      "module": "run_keys",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

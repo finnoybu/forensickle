@@ -1,0 +1,31 @@
+{
+  "artifact_id": "edge_history",
+  "display_name": "Edge History",
+  "category": "Browser & Web Activity",
+  "description": "Microsoft Edge browsing history including URLs, titles, visit counts, and timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\History"
+      ],
+      "module": "edge_history",
+      "source_type": "sqlite_database"
+    },
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/Microsoft Edge/*/History"
+      ],
+      "module": "edge_history",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "browser_activity",
+    "user_activity",
+    "file_download"
+  ]
+}

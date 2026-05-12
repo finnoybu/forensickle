@@ -1,0 +1,25 @@
+{
+  "artifact_id": "systemd_timers",
+  "display_name": "Systemd Timers",
+  "category": "Persistence & Autostart",
+  "description": "Linux systemd timer unit files that schedule periodic or calendar-based task execution.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/systemd/system/*.timer",
+        "/usr/lib/systemd/system/*.timer",
+        "~/.config/systemd/user/*.timer"
+      ],
+      "module": "systemd_timers",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

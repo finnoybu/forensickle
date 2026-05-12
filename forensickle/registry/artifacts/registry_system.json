@@ -1,0 +1,27 @@
+{
+  "artifact_id": "registry_system",
+  "display_name": "Registry Hives (System)",
+  "category": "System Configuration",
+  "description": "Windows system registry hives (SAM, SYSTEM, SOFTWARE, SECURITY) containing OS and security configuration.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "server",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\config\\SAM",
+        "%SYSTEMROOT%\\System32\\config\\SYSTEM",
+        "%SYSTEMROOT%\\System32\\config\\SOFTWARE",
+        "%SYSTEMROOT%\\System32\\config\\SECURITY"
+      ],
+      "module": "registry_system",
+      "source_type": "registry_hive"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "system_state",
+    "account_activity"
+  ]
+}

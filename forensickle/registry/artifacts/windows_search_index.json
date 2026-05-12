@@ -1,0 +1,24 @@
+{
+  "artifact_id": "windows_search_index",
+  "display_name": "Windows Search Index",
+  "category": "Cloud & Third-Party Applications",
+  "description": "Windows Search index database containing indexed file metadata, content, and email entries.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 900,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%PROGRAMDATA%\\Microsoft\\Search\\Data\\Applications\\Windows\\Windows.edb"
+      ],
+      "module": "windows_search_index",
+      "source_type": "ese_database"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "user_activity",
+    "system_state"
+  ]
+}

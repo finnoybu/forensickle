@@ -1,0 +1,34 @@
+{
+  "artifact_id": "environment_vars",
+  "display_name": "Environment Variables",
+  "category": "System Configuration",
+  "description": "System and user environment variables including PATH, proxy settings, and custom configurations.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "environment_vars",
+      "source_type": "file"
+    },
+    "macos": {
+      "source_paths": [],
+      "module": "environment_vars",
+      "source_type": "file"
+    },
+    "linux": {
+      "source_paths": [
+        "/etc/environment",
+        "/etc/profile"
+      ],
+      "module": "environment_vars",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "system_state"
+  ]
+}

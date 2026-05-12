@@ -1,0 +1,25 @@
+{
+  "artifact_id": "tcc_database",
+  "display_name": "TCC Database",
+  "category": "System Configuration",
+  "description": "macOS Transparency, Consent, and Control database tracking application permission grants and denials.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/com.apple.TCC/TCC.db",
+        "/Library/Application Support/com.apple.TCC/TCC.db"
+      ],
+      "module": "tcc_database",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "account_activity",
+    "user_activity"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "artifact_id": "recent_files",
+  "display_name": "Recent Files",
+  "category": "User Activity",
+  "description": "Windows Recent folder containing LNK shortcuts to recently accessed files and folders.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%APPDATA%\\Microsoft\\Windows\\Recent\\*",
+        "%APPDATA%\\Microsoft\\Windows\\Recent\\AutomaticDestinations\\*",
+        "%APPDATA%\\Microsoft\\Windows\\Recent\\CustomDestinations\\*"
+      ],
+      "module": "recent_files",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access"
+  ]
+}

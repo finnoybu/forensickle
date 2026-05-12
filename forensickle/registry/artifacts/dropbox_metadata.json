@@ -1,0 +1,25 @@
+{
+  "artifact_id": "dropbox_metadata",
+  "display_name": "Dropbox Metadata",
+  "category": "Cloud & Third-Party Applications",
+  "description": "Dropbox client databases and logs tracking synced files, deleted items, and sharing metadata.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\Dropbox\\instance*\\*.dbx",
+        "%APPDATA%\\Dropbox\\logs\\*"
+      ],
+      "module": "dropbox_metadata",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "data_exfiltration",
+    "user_activity"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_id": "known_hosts",
+  "display_name": "Known Hosts",
+  "category": "Authentication & Access",
+  "description": "SSH known_hosts files recording previously connected remote server fingerprints.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "~/.ssh/known_hosts",
+        "/etc/ssh/ssh_known_hosts"
+      ],
+      "module": "known_hosts",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "lateral_movement"
+  ]
+}

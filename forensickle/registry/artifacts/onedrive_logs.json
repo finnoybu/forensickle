@@ -1,0 +1,25 @@
+{
+  "artifact_id": "onedrive_logs",
+  "display_name": "OneDrive Logs",
+  "category": "Cloud & Third-Party Applications",
+  "description": "Microsoft OneDrive sync logs and metadata tracking cloud file synchronization and sharing activity.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive\\logs\\*",
+        "%USERPROFILE%\\AppData\\Local\\Microsoft\\OneDrive\\settings\\*"
+      ],
+      "module": "onedrive_logs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "data_exfiltration",
+    "user_activity"
+  ]
+}

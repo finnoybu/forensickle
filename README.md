@@ -1,7 +1,7 @@
 <a name="top"></a>
 
 <!-- PROJECT LOGO -->
-![Forensicle: Digitial Forensics Data Harvesting](/images/logo.svg)
+![Forensicle: Digitial Forensics Data Harvesting](/images/svg/logo.svg)
 
 <!-- TABLE OF CONTENTS -->
 <details>

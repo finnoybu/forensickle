@@ -1,0 +1,22 @@
+{
+  "artifact_id": "windows_firewall_log",
+  "display_name": "Windows Firewall Log",
+  "category": "Network & Connections",
+  "description": "Windows Firewall log files recording allowed and dropped network connections.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\LogFiles\\Firewall\\pfirewall.log"
+      ],
+      "module": "windows_firewall_log",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "network_activity"
+  ]
+}

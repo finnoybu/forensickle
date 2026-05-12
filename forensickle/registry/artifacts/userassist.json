@@ -1,0 +1,23 @@
+{
+  "artifact_id": "userassist",
+  "display_name": "UserAssist",
+  "category": "Execution Evidence",
+  "description": "Windows UserAssist registry keys tracking GUI program execution counts and last run times.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\NTUSER.DAT"
+      ],
+      "module": "userassist",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "user_activity"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_id": "initd_scripts",
+  "display_name": "Init.d Scripts",
+  "category": "Persistence & Autostart",
+  "description": "Linux SysV init scripts that run services during system startup and shutdown.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/init.d/*",
+        "/etc/rc.local"
+      ],
+      "module": "initd_scripts",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

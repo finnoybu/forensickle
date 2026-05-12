@@ -1,0 +1,39 @@
+{
+  "artifact_id": "cron_jobs",
+  "display_name": "Cron Jobs",
+  "category": "Persistence & Autostart",
+  "description": "Cron job configurations scheduling recurring command execution for users and the system.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "/usr/lib/cron/tabs/*",
+        "/var/at/tabs/*",
+        "/etc/crontab",
+        "/etc/cron.d/*"
+      ],
+      "module": "cron_jobs",
+      "source_type": "file"
+    },
+    "linux": {
+      "source_paths": [
+        "/var/spool/cron/crontabs/*",
+        "/etc/crontab",
+        "/etc/cron.d/*",
+        "/etc/cron.daily/*",
+        "/etc/cron.hourly/*",
+        "/etc/cron.weekly/*",
+        "/etc/cron.monthly/*"
+      ],
+      "module": "cron_jobs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

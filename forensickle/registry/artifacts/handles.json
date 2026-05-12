@@ -1,0 +1,22 @@
+{
+  "artifact_id": "handles",
+  "display_name": "Windows Handles",
+  "category": "Authentication & Access",
+  "description": "Windows process handle table showing open handles to files, registry keys, mutexes, and other objects.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "handles",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "file_access",
+    "system_state"
+  ]
+}

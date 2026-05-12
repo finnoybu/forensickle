@@ -1,0 +1,23 @@
+{
+  "artifact_id": "wmi_persistence",
+  "display_name": "WMI Persistence",
+  "category": "Persistence & Autostart",
+  "description": "Windows WMI event subscriptions used for persistent code execution via filter-consumer bindings.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\wbem\\Repository\\OBJECTS.DATA"
+      ],
+      "module": "wmi_persistence",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

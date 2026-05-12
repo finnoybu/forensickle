@@ -1,0 +1,23 @@
+{
+  "artifact_id": "ntfs_logfile",
+  "display_name": "NTFS LogFile",
+  "category": "File System & Disk",
+  "description": "NTFS transaction log file recording file system metadata changes for crash recovery.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMDRIVE%\\$LogFile"
+      ],
+      "module": "ntfs_logfile",
+      "source_type": "ntfs_artifact"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "anti_forensics"
+  ]
+}

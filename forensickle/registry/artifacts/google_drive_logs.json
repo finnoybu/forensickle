@@ -1,0 +1,25 @@
+{
+  "artifact_id": "google_drive_logs",
+  "display_name": "Google Drive Logs",
+  "category": "Cloud & Third-Party Applications",
+  "description": "Google Drive for Desktop sync logs and metadata tracking cloud file operations.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\Google\\DriveFS\\Logs\\*",
+        "%LOCALAPPDATA%\\Google\\DriveFS\\*\\content_cache\\*"
+      ],
+      "module": "google_drive_logs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "data_exfiltration",
+    "user_activity"
+  ]
+}

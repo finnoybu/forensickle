@@ -1,0 +1,25 @@
+{
+  "artifact_id": "event_logs",
+  "display_name": "Windows Event Logs",
+  "category": "Logs & Audit Trail",
+  "description": "Windows EVTX event log files recording security, system, application, and other audit events.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "server",
+  "timeout": 900,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\winevt\\Logs\\*.evtx"
+      ],
+      "module": "event_logs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "account_activity",
+    "system_state",
+    "lateral_movement"
+  ]
+}

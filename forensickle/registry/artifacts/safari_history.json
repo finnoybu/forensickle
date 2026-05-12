@@ -1,0 +1,23 @@
+{
+  "artifact_id": "safari_history",
+  "display_name": "Safari History",
+  "category": "Browser & Web Activity",
+  "description": "Apple Safari browsing history including URLs, titles, and visit timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Safari/History.db"
+      ],
+      "module": "safari_history",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "browser_activity",
+    "user_activity"
+  ]
+}

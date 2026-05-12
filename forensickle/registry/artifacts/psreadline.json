@@ -1,0 +1,23 @@
+{
+  "artifact_id": "psreadline",
+  "display_name": "PowerShell ReadLine History",
+  "category": "User Activity",
+  "description": "PowerShell PSReadLine console history recording commands executed in PowerShell sessions.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%APPDATA%\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt"
+      ],
+      "module": "psreadline",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "execution"
+  ]
+}

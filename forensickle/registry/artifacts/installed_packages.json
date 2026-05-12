@@ -1,0 +1,24 @@
+{
+  "artifact_id": "installed_packages",
+  "display_name": "Installed Packages",
+  "category": "System Configuration",
+  "description": "Linux installed software packages from dpkg, rpm, and other package managers.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/lib/dpkg/status",
+        "/var/lib/rpm/rpmdb.sqlite"
+      ],
+      "module": "installed_packages",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "system_state"
+  ]
+}

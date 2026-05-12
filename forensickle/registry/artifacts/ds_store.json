@@ -1,0 +1,26 @@
+{
+  "artifact_id": "ds_store",
+  "display_name": ".DS_Store Files",
+  "category": "User Activity",
+  "description": "macOS .DS_Store files recording Finder folder view settings, icon positions, and directory contents.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/.DS_Store",
+        "~/Desktop/.DS_Store",
+        "~/Documents/.DS_Store",
+        "~/Downloads/.DS_Store"
+      ],
+      "module": "ds_store",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access"
+  ]
+}

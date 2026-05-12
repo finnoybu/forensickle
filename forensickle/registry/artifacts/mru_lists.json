@@ -1,0 +1,23 @@
+{
+  "artifact_id": "mru_lists",
+  "display_name": "MRU Lists",
+  "category": "User Activity",
+  "description": "Windows Most Recently Used lists tracking recently opened files, saved files, and run commands.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\NTUSER.DAT"
+      ],
+      "module": "mru_lists",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access"
+  ]
+}

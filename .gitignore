@@ -1,6 +1,14 @@
 # Custom
 ~*/
 
+# Forensickle: runtime output, build artifacts, local research, test fixtures
+output/
+forensickle_output/
+ez_amcache_output/
+.research/
+.resources/
+*.hiv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

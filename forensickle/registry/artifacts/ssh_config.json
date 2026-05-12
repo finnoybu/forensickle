@@ -1,0 +1,27 @@
+{
+  "artifact_id": "ssh_config",
+  "display_name": "SSH Configuration",
+  "category": "Authentication & Access",
+  "description": "SSH client and server configuration files defining connection parameters and security settings.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "~/.ssh/config",
+        "/etc/ssh/sshd_config",
+        "/etc/ssh/ssh_config",
+        "/etc/ssh/sshd_config.d/*"
+      ],
+      "module": "ssh_config",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "lateral_movement",
+    "account_activity"
+  ]
+}

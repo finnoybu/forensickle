@@ -1,0 +1,28 @@
+{
+  "artifact_id": "package_manager_logs",
+  "display_name": "Package Manager Logs",
+  "category": "Logs & Audit Trail",
+  "description": "Linux package manager logs recording software install, update, and removal operations.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/log/apt/history.log",
+        "/var/log/apt/history.log.*",
+        "/var/log/dpkg.log",
+        "/var/log/dpkg.log.*",
+        "/var/log/yum.log",
+        "/var/log/dnf.log"
+      ],
+      "module": "package_manager_logs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "system_state"
+  ]
+}

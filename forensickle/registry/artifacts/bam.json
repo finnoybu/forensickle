@@ -1,0 +1,22 @@
+{
+  "artifact_id": "bam",
+  "display_name": "Background Activity Moderator",
+  "category": "Execution Evidence",
+  "description": "Windows BAM registry key recording executable paths and last execution timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\config\\SYSTEM"
+      ],
+      "module": "bam",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution"
+  ]
+}

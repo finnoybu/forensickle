@@ -1,0 +1,26 @@
+{
+  "artifact_id": "auth_log",
+  "display_name": "Auth Log",
+  "category": "Logs & Audit Trail",
+  "description": "Linux authentication log recording login attempts, sudo usage, and PAM authentication events.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/log/auth.log",
+        "/var/log/auth.log.*",
+        "/var/log/secure",
+        "/var/log/secure.*"
+      ],
+      "module": "auth_log",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "account_activity",
+    "lateral_movement"
+  ]
+}

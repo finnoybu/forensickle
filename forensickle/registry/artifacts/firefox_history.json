@@ -1,0 +1,38 @@
+{
+  "artifact_id": "firefox_history",
+  "display_name": "Firefox History",
+  "category": "Browser & Web Activity",
+  "description": "Mozilla Firefox browsing history including URLs, titles, visit counts, and timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%APPDATA%\\Mozilla\\Firefox\\Profiles\\*\\places.sqlite"
+      ],
+      "module": "firefox_history",
+      "source_type": "sqlite_database"
+    },
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/Firefox/Profiles/*/places.sqlite"
+      ],
+      "module": "firefox_history",
+      "source_type": "sqlite_database"
+    },
+    "linux": {
+      "source_paths": [
+        "~/.mozilla/firefox/*/places.sqlite"
+      ],
+      "module": "firefox_history",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "browser_activity",
+    "user_activity",
+    "file_download"
+  ]
+}

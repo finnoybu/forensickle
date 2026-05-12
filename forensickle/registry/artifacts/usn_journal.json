@@ -1,0 +1,23 @@
+{
+  "artifact_id": "usn_journal",
+  "display_name": "USN Journal",
+  "category": "File System & Disk",
+  "description": "NTFS Update Sequence Number journal recording file system changes including creates, deletes, and renames.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "server",
+  "timeout": 900,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMDRIVE%\\$Extend\\$UsnJrnl:$J"
+      ],
+      "module": "usn_journal",
+      "source_type": "ntfs_artifact"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "anti_forensics"
+  ]
+}

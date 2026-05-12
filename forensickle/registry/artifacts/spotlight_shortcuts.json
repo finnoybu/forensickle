@@ -1,0 +1,22 @@
+{
+  "artifact_id": "spotlight_shortcuts",
+  "display_name": "Spotlight Shortcuts",
+  "category": "User Activity",
+  "description": "macOS Spotlight search shortcuts and top hits recording frequently searched and launched items.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/com.apple.spotlight.Shortcuts"
+      ],
+      "module": "spotlight_shortcuts",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity"
+  ]
+}

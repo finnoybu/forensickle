@@ -1,0 +1,23 @@
+{
+  "artifact_id": "recent_items",
+  "display_name": "Recent Items",
+  "category": "User Activity",
+  "description": "macOS recent items tracking recently opened documents, applications, and servers.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/com.apple.sharedfilelist/*.sfl2"
+      ],
+      "module": "recent_items",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access"
+  ]
+}

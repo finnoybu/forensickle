@@ -1,0 +1,27 @@
+{
+  "artifact_id": "system_info",
+  "display_name": "System Information",
+  "category": "System Configuration",
+  "description": "Linux system information including hostname, kernel version, OS release, and hardware details.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/os-release",
+        "/etc/hostname",
+        "/proc/version",
+        "/proc/cpuinfo",
+        "/proc/meminfo"
+      ],
+      "module": "system_info",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "system_state",
+    "configuration"
+  ]
+}

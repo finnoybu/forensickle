@@ -1,0 +1,38 @@
+{
+  "artifact_id": "chrome_history",
+  "display_name": "Chrome History",
+  "category": "Browser & Web Activity",
+  "description": "Google Chrome browsing history including URLs, titles, visit counts, and timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\History"
+      ],
+      "module": "chrome_history",
+      "source_type": "sqlite_database"
+    },
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/Google/Chrome/*/History"
+      ],
+      "module": "chrome_history",
+      "source_type": "sqlite_database"
+    },
+    "linux": {
+      "source_paths": [
+        "~/.config/google-chrome/*/History"
+      ],
+      "module": "chrome_history",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "browser_activity",
+    "user_activity",
+    "file_download"
+  ]
+}

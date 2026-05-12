@@ -1,0 +1,23 @@
+{
+  "artifact_id": "windows_timeline",
+  "display_name": "Windows Timeline",
+  "category": "Execution Evidence",
+  "description": "Windows Activity History database tracking user activities, application usage, and file interactions.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\ConnectedDevicesPlatform\\*\\ActivitiesCache.db"
+      ],
+      "module": "windows_timeline",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "user_activity"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_id": "scheduled_tasks",
+  "display_name": "Scheduled Tasks",
+  "category": "Persistence & Autostart",
+  "description": "Windows Task Scheduler XML definitions including triggers, actions, and execution history.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\Tasks\\*",
+        "%SYSTEMROOT%\\System32\\Tasks\\**\\*"
+      ],
+      "module": "scheduled_tasks",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

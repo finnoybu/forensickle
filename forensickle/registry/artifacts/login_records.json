@@ -1,0 +1,26 @@
+{
+  "artifact_id": "login_records",
+  "display_name": "Login Records",
+  "category": "Authentication & Access",
+  "description": "Linux utmp, wtmp, and btmp binary records tracking user logins, logouts, and failed attempts.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/log/wtmp",
+        "/var/log/btmp",
+        "/var/run/utmp",
+        "/var/log/lastlog"
+      ],
+      "module": "login_records",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "account_activity",
+    "lateral_movement"
+  ]
+}

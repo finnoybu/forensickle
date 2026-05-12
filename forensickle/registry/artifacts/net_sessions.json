@@ -1,0 +1,22 @@
+{
+  "artifact_id": "net_sessions",
+  "display_name": "Net Sessions",
+  "category": "Network & Connections",
+  "description": "Windows network sessions showing active SMB connections from remote machines to this system.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "net_sessions",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "lateral_movement",
+    "account_activity"
+  ]
+}

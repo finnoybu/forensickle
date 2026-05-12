@@ -1,0 +1,29 @@
+{
+  "artifact_id": "av_logs",
+  "display_name": "Antivirus Logs",
+  "category": "Cloud & Third-Party Applications",
+  "description": "Multi-vendor antivirus log files recording scan results, detections, and quarantine actions.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%PROGRAMDATA%\\Symantec\\*\\Logs\\*",
+        "%PROGRAMDATA%\\McAfee\\*\\Logs\\*",
+        "%PROGRAMDATA%\\ESET\\*\\Logs\\*",
+        "%PROGRAMDATA%\\Trend Micro\\*\\Log\\*",
+        "%PROGRAMDATA%\\Sophos\\*\\Logs\\*",
+        "%PROGRAMDATA%\\Kaspersky Lab\\*\\Report\\*"
+      ],
+      "module": "av_logs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "anti_forensics",
+    "system_state"
+  ]
+}

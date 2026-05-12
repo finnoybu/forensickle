@@ -1,0 +1,24 @@
+{
+  "artifact_id": "keychain",
+  "display_name": "macOS Keychain",
+  "category": "Authentication & Access",
+  "description": "macOS Keychain database files storing credentials, certificates, and secure notes.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Keychains/login.keychain-db",
+        "/Library/Keychains/System.keychain"
+      ],
+      "module": "keychain",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "account_activity",
+    "configuration"
+  ]
+}

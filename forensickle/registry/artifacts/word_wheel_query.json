@@ -1,0 +1,22 @@
+{
+  "artifact_id": "word_wheel_query",
+  "display_name": "WordWheelQuery",
+  "category": "User Activity",
+  "description": "Windows Explorer search terms entered in the search bar stored in the user registry.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\NTUSER.DAT"
+      ],
+      "module": "word_wheel_query",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity"
+  ]
+}

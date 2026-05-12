@@ -1,0 +1,25 @@
+{
+  "artifact_id": "unified_log",
+  "display_name": "Unified Log",
+  "category": "Logs & Audit Trail",
+  "description": "macOS Unified Logging system capturing os_log messages from all processes and subsystems.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "/private/var/db/diagnostics/*.tracev3",
+        "/private/var/db/uuidtext/*"
+      ],
+      "module": "unified_log",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "system_state",
+    "account_activity"
+  ]
+}

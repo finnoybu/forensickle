@@ -1,0 +1,38 @@
+{
+  "artifact_id": "wifi_history",
+  "display_name": "Wi-Fi History",
+  "category": "Network & Connections",
+  "description": "Wireless network connection history including SSIDs, connection timestamps, and profile configurations.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%PROGRAMDATA%\\Microsoft\\Wlansvc\\Profiles\\Interfaces\\*\\*.xml"
+      ],
+      "module": "wifi_history",
+      "source_type": "live_data"
+    },
+    "macos": {
+      "source_paths": [
+        "/Library/Preferences/com.apple.wifi.known-networks.plist",
+        "/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist"
+      ],
+      "module": "wifi_history",
+      "source_type": "live_data"
+    },
+    "linux": {
+      "source_paths": [
+        "/etc/NetworkManager/system-connections/*"
+      ],
+      "module": "wifi_history",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "device_usage"
+  ]
+}

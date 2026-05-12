@@ -1,0 +1,24 @@
+{
+  "artifact_id": "services",
+  "display_name": "Windows Services",
+  "category": "Persistence & Autostart",
+  "description": "Windows services registry configuration including binary paths, start types, and service accounts.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\config\\SYSTEM"
+      ],
+      "module": "services",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution",
+    "configuration"
+  ]
+}

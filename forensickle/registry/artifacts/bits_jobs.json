@@ -1,0 +1,25 @@
+{
+  "artifact_id": "bits_jobs",
+  "display_name": "BITS Jobs",
+  "category": "Persistence & Autostart",
+  "description": "Windows Background Intelligent Transfer Service jobs used for file transfers and potential persistence.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%ALLUSERSPROFILE%\\Microsoft\\Network\\Downloader\\qmgr0.dat",
+        "%ALLUSERSPROFILE%\\Microsoft\\Network\\Downloader\\qmgr1.dat"
+      ],
+      "module": "bits_jobs",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "network_activity",
+    "data_exfiltration"
+  ]
+}

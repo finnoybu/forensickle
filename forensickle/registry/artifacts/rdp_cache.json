@@ -1,0 +1,23 @@
+{
+  "artifact_id": "rdp_cache",
+  "display_name": "RDP Bitmap Cache",
+  "category": "Remote Access & Lateral Movement",
+  "description": "Windows Remote Desktop Protocol bitmap cache files containing screen fragments from RDP sessions.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\Microsoft\\Terminal Server Client\\Cache\\*"
+      ],
+      "module": "rdp_cache",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "lateral_movement",
+    "user_activity"
+  ]
+}

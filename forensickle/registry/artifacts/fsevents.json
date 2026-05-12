@@ -1,0 +1,23 @@
+{
+  "artifact_id": "fsevents",
+  "display_name": "FSEvents",
+  "category": "File System & Disk",
+  "description": "macOS FSEvents logs recording file system changes including file creation, modification, and deletion.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "server",
+  "timeout": 900,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "/.fseventsd/*"
+      ],
+      "module": "fsevents",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "anti_forensics"
+  ]
+}

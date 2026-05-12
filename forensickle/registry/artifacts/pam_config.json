@@ -1,0 +1,25 @@
+{
+  "artifact_id": "pam_config",
+  "display_name": "PAM Configuration",
+  "category": "Persistence & Autostart",
+  "description": "Linux Pluggable Authentication Module configuration files controlling authentication behavior.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/pam.d/*",
+        "/etc/pam.conf"
+      ],
+      "module": "pam_config",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "account_activity",
+    "configuration"
+  ]
+}

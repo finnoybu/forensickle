@@ -1,0 +1,23 @@
+{
+  "artifact_id": "typed_paths",
+  "display_name": "Typed Paths",
+  "category": "User Activity",
+  "description": "Windows Explorer typed paths from the address bar recorded in the user registry.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\NTUSER.DAT"
+      ],
+      "module": "typed_paths",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access"
+  ]
+}

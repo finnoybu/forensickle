@@ -1,0 +1,26 @@
+{
+  "artifact_id": "authorized_keys",
+  "display_name": "Authorized Keys",
+  "category": "Authentication & Access",
+  "description": "SSH authorized_keys files listing public keys permitted for remote authentication.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "~/.ssh/authorized_keys",
+        "~/.ssh/authorized_keys2",
+        "/etc/ssh/authorized_keys/*"
+      ],
+      "module": "authorized_keys",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "account_activity",
+    "lateral_movement",
+    "persistence"
+  ]
+}

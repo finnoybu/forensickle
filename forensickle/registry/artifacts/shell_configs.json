@@ -1,0 +1,31 @@
+{
+  "artifact_id": "shell_configs",
+  "display_name": "Shell Configuration Files",
+  "category": "User Activity",
+  "description": "Linux shell configuration files including .bashrc, .profile, and .zshrc that may contain persistent commands.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "~/.bashrc",
+        "~/.bash_profile",
+        "~/.profile",
+        "~/.zshrc",
+        "~/.zprofile",
+        "/etc/profile",
+        "/etc/bash.bashrc",
+        "/etc/profile.d/*"
+      ],
+      "module": "shell_configs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "persistence",
+    "configuration"
+  ]
+}

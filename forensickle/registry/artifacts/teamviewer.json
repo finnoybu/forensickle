@@ -1,0 +1,27 @@
+{
+  "artifact_id": "teamviewer",
+  "display_name": "TeamViewer",
+  "category": "Remote Access & Lateral Movement",
+  "description": "TeamViewer log files recording remote session connections, partner IDs, and timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%APPDATA%\\TeamViewer\\Connections_incoming.txt",
+        "%APPDATA%\\TeamViewer\\TeamViewer*_Logfile.log",
+        "%PROGRAMFILES%\\TeamViewer\\Connections_incoming.txt",
+        "%PROGRAMFILES(X86)%\\TeamViewer\\Connections_incoming.txt"
+      ],
+      "module": "teamviewer",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "lateral_movement",
+    "network_activity",
+    "user_activity"
+  ]
+}

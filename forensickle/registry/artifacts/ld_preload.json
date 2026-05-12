@@ -1,0 +1,26 @@
+{
+  "artifact_id": "ld_preload",
+  "display_name": "LD_PRELOAD Configuration",
+  "category": "Persistence & Autostart",
+  "description": "Linux LD_PRELOAD and ld.so.preload configurations used to inject shared libraries into processes.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/ld.so.preload",
+        "/etc/ld.so.conf",
+        "/etc/ld.so.conf.d/*"
+      ],
+      "module": "ld_preload",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution",
+    "anti_forensics"
+  ]
+}

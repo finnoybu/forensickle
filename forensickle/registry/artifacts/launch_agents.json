@@ -1,0 +1,24 @@
+{
+  "artifact_id": "launch_agents",
+  "display_name": "Launch Agents",
+  "category": "Persistence & Autostart",
+  "description": "macOS LaunchAgent plist files that run programs on user login.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/LaunchAgents/*.plist",
+        "/Library/LaunchAgents/*.plist"
+      ],
+      "module": "launch_agents",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

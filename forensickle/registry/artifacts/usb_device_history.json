@@ -1,0 +1,25 @@
+{
+  "artifact_id": "usb_device_history",
+  "display_name": "USB Device History",
+  "category": "System Configuration",
+  "description": "Windows USB device connection history from USBSTOR and related registry keys tracking device serials and timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\config\\SYSTEM",
+        "%SYSTEMROOT%\\inf\\setupapi.dev.log"
+      ],
+      "module": "usb_device_history",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "device_usage",
+    "data_exfiltration",
+    "configuration"
+  ]
+}

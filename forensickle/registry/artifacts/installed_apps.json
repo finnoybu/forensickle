@@ -1,0 +1,24 @@
+{
+  "artifact_id": "installed_apps",
+  "display_name": "Installed Applications",
+  "category": "System Configuration",
+  "description": "macOS installed applications from /Applications and system installer receipts.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "/Applications/*/Contents/Info.plist",
+        "/var/db/receipts/*.plist"
+      ],
+      "module": "installed_apps",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "system_state"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_id": "quarantine_events",
+  "display_name": "Quarantine Events",
+  "category": "Browser & Web Activity",
+  "description": "macOS quarantine events tracking downloaded files and their source URLs.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2"
+      ],
+      "module": "quarantine_events",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "browser_activity",
+    "file_download",
+    "user_activity"
+  ]
+}

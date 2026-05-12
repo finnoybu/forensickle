@@ -1,0 +1,24 @@
+{
+  "artifact_id": "shellbags",
+  "display_name": "Shellbags",
+  "category": "User Activity",
+  "description": "Windows Shellbag registry entries recording folder access, view preferences, and directory traversal.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\NTUSER.DAT",
+        "%LOCALAPPDATA%\\Microsoft\\Windows\\UsrClass.dat"
+      ],
+      "module": "shellbags",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access"
+  ]
+}

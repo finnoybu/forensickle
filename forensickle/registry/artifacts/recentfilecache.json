@@ -1,0 +1,22 @@
+{
+  "artifact_id": "recentfilecache",
+  "display_name": "RecentFileCache",
+  "category": "Execution Evidence",
+  "description": "Windows RecentFileCache.bcf recording recently executed programs tracked by the Application Experience service.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\AppCompat\\Programs\\RecentFileCache.bcf"
+      ],
+      "module": "recentfilecache",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution"
+  ]
+}

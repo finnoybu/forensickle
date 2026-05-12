@@ -1,0 +1,25 @@
+{
+  "artifact_id": "freedesktop_trash",
+  "display_name": "FreeDesktop Trash",
+  "category": "User Activity",
+  "description": "Linux FreeDesktop.org trash directory metadata tracking deleted file original paths and deletion timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "~/.local/share/Trash/info/*.trashinfo",
+        "~/.local/share/Trash/files/*"
+      ],
+      "module": "freedesktop_trash",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access",
+    "anti_forensics"
+  ]
+}

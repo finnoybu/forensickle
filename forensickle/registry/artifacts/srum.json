@@ -1,0 +1,24 @@
+{
+  "artifact_id": "srum",
+  "display_name": "System Resource Usage Monitor",
+  "category": "Execution Evidence",
+  "description": "Windows SRUM database tracking application resource usage, network data, and energy consumption.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\sru\\SRUDB.dat"
+      ],
+      "module": "srum",
+      "source_type": "ese_database"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "network_activity",
+    "system_state"
+  ]
+}

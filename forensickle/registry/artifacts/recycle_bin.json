@@ -1,0 +1,24 @@
+{
+  "artifact_id": "recycle_bin",
+  "display_name": "Recycle Bin",
+  "category": "User Activity",
+  "description": "Windows Recycle Bin $I and $R files tracking deleted file metadata and original paths.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMDRIVE%\\$Recycle.Bin\\*\\$I*"
+      ],
+      "module": "recycle_bin",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access",
+    "anti_forensics"
+  ]
+}

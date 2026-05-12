@@ -1,0 +1,26 @@
+{
+  "artifact_id": "mount_info",
+  "display_name": "Mount Information",
+  "category": "System Configuration",
+  "description": "Linux mounted file systems, mount options, and fstab configuration for persistent mounts.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/fstab",
+        "/proc/mounts",
+        "/proc/self/mountinfo"
+      ],
+      "module": "mount_info",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "system_state",
+    "device_usage"
+  ]
+}

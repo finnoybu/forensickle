@@ -1,0 +1,23 @@
+{
+  "artifact_id": "prefetch",
+  "display_name": "Prefetch",
+  "category": "Execution Evidence",
+  "description": "Windows Prefetch files recording application execution history, run counts, and referenced files.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\Prefetch\\*.pf"
+      ],
+      "module": "prefetch",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "file_access"
+  ]
+}

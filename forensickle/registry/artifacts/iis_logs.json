@@ -1,0 +1,24 @@
+{
+  "artifact_id": "iis_logs",
+  "display_name": "IIS Logs",
+  "category": "Cloud & Third-Party Applications",
+  "description": "Microsoft IIS web server access logs recording HTTP requests, client IPs, and response codes.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMDRIVE%\\inetpub\\logs\\LogFiles\\*\\*.log",
+        "%SYSTEMROOT%\\System32\\LogFiles\\W3SVC*\\*.log"
+      ],
+      "module": "iis_logs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "lateral_movement"
+  ]
+}

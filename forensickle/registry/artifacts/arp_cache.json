@@ -1,0 +1,21 @@
+{
+  "artifact_id": "arp_cache",
+  "display_name": "ARP Cache",
+  "category": "Network & Connections",
+  "description": "Windows ARP table cache mapping IP addresses to MAC addresses on the local network.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "arp_cache",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "lateral_movement"
+  ]
+}

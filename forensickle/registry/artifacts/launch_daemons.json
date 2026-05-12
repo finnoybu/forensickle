@@ -1,0 +1,24 @@
+{
+  "artifact_id": "launch_daemons",
+  "display_name": "Launch Daemons",
+  "category": "Persistence & Autostart",
+  "description": "macOS LaunchDaemon plist files that run system-wide background services at boot.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "/Library/LaunchDaemons/*.plist",
+        "/System/Library/LaunchDaemons/*.plist"
+      ],
+      "module": "launch_daemons",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

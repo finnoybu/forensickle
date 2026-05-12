@@ -1,0 +1,25 @@
+{
+  "artifact_id": "knowledgec",
+  "display_name": "KnowledgeC",
+  "category": "Execution Evidence",
+  "description": "macOS KnowledgeC database tracking application usage, device activity, and user interactions.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "~/Library/Application Support/Knowledge/knowledgeC.db",
+        "/private/var/db/CoreDuet/Knowledge/knowledgeC.db"
+      ],
+      "module": "knowledgec",
+      "source_type": "sqlite_database"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "user_activity",
+    "device_usage"
+  ]
+}

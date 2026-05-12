@@ -1,0 +1,25 @@
+{
+  "artifact_id": "wer_dumps",
+  "display_name": "Windows Error Reporting Dumps",
+  "category": "Execution Evidence",
+  "description": "Windows Error Reporting crash dumps and report files recording application faults and system errors.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\CrashDumps\\*",
+        "%PROGRAMDATA%\\Microsoft\\Windows\\WER\\ReportArchive\\*",
+        "%PROGRAMDATA%\\Microsoft\\Windows\\WER\\ReportQueue\\*"
+      ],
+      "module": "wer_dumps",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "system_state"
+  ]
+}

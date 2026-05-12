@@ -1,0 +1,25 @@
+{
+  "artifact_id": "jumplist",
+  "display_name": "Jump Lists",
+  "category": "User Activity",
+  "description": "Windows Jump List files tracking recently and frequently accessed files per application.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%APPDATA%\\Microsoft\\Windows\\Recent\\AutomaticDestinations\\*.automaticDestinations-ms",
+        "%APPDATA%\\Microsoft\\Windows\\Recent\\CustomDestinations\\*.customDestinations-ms"
+      ],
+      "module": "jumplist",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access",
+    "execution"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "artifact_id": "syslog",
+  "display_name": "Syslog",
+  "category": "Logs & Audit Trail",
+  "description": "Linux syslog files recording kernel messages, daemon output, and general system events.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/log/syslog",
+        "/var/log/syslog.*",
+        "/var/log/messages",
+        "/var/log/messages.*"
+      ],
+      "module": "syslog",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "system_state",
+    "execution"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "artifact_id": "process_list",
+  "display_name": "Process List",
+  "category": "Execution Evidence",
+  "description": "Live snapshot of running processes including PIDs, parent PIDs, command lines, and resource usage.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "process_list",
+      "source_type": "live_data"
+    },
+    "macos": {
+      "source_paths": [],
+      "module": "process_list",
+      "source_type": "live_data"
+    },
+    "linux": {
+      "source_paths": [],
+      "module": "process_list",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "system_state"
+  ]
+}

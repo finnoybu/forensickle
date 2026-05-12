@@ -1,0 +1,22 @@
+{
+  "artifact_id": "open_files",
+  "display_name": "Open Files",
+  "category": "Network & Connections",
+  "description": "Linux open file descriptors and network sockets for running processes via lsof.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [],
+      "module": "open_files",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "file_access",
+    "system_state"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "artifact_id": "amcache",
+  "display_name": "Amcache",
+  "category": "Execution Evidence",
+  "description": "Windows Amcache hive tracking application execution, file hashes, and installation metadata.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\AppCompat\\Programs\\Amcache.hve"
+      ],
+      "module": "amcache",
+      "source_type": "registry_hive"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "file_access"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "artifact_id": "kernel_modules",
+  "display_name": "Kernel Modules",
+  "category": "System Configuration",
+  "description": "Linux loaded kernel modules and module configuration files that extend kernel functionality.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/proc/modules",
+        "/etc/modules",
+        "/etc/modprobe.d/*",
+        "/etc/modules-load.d/*"
+      ],
+      "module": "kernel_modules",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "persistence",
+    "system_state"
+  ]
+}

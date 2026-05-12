@@ -1,0 +1,22 @@
+{
+  "artifact_id": "shimcache",
+  "display_name": "ShimCache",
+  "category": "Execution Evidence",
+  "description": "Application Compatibility Cache recording executables that have been run or present on the system.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\config\\SYSTEM"
+      ],
+      "module": "shimcache",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution"
+  ]
+}

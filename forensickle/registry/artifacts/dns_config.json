@@ -1,0 +1,25 @@
+{
+  "artifact_id": "dns_config",
+  "display_name": "DNS Configuration",
+  "category": "Network & Connections",
+  "description": "Linux DNS resolver configuration files defining nameservers and search domains.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 120,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/resolv.conf",
+        "/etc/systemd/resolved.conf",
+        "/etc/nsswitch.conf"
+      ],
+      "module": "dns_config",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "network_activity",
+    "configuration"
+  ]
+}

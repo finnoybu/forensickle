@@ -1,0 +1,24 @@
+{
+  "artifact_id": "lnk_files",
+  "display_name": "LNK Files",
+  "category": "User Activity",
+  "description": "Windows shortcut (LNK) files containing target paths, timestamps, volume info, and MAC addresses.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%APPDATA%\\Microsoft\\Windows\\Recent\\*.lnk",
+        "%USERPROFILE%\\Desktop\\*.lnk"
+      ],
+      "module": "lnk_files",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "user_activity",
+    "file_access"
+  ]
+}

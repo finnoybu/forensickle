@@ -1,0 +1,24 @@
+{
+  "artifact_id": "systemd_journal",
+  "display_name": "Systemd Journal",
+  "category": "Logs & Audit Trail",
+  "description": "Linux systemd journal binary logs capturing structured system and service messages.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 600,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/log/journal/*/*",
+        "/run/log/journal/*/*"
+      ],
+      "module": "systemd_journal",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "system_state"
+  ]
+}

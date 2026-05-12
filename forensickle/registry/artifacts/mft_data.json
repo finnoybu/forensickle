@@ -1,0 +1,22 @@
+{
+  "artifact_id": "mft_data",
+  "display_name": "MFT (Data Drives)",
+  "category": "File System & Disk",
+  "description": "Master File Table from non-system NTFS drives.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "server",
+  "timeout": 900,
+  "platforms": {
+    "windows": {
+      "source_paths": [],
+      "module": "mft",
+      "source_type": "ntfs_artifact"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "anti_forensics",
+    "system_state"
+  ]
+}

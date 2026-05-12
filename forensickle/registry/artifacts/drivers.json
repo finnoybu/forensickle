@@ -1,0 +1,25 @@
+{
+  "artifact_id": "drivers",
+  "display_name": "Windows Drivers",
+  "category": "System Configuration",
+  "description": "Windows installed drivers including file paths, versions, and signing status.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\drivers\\*",
+        "%SYSTEMROOT%\\inf\\*.inf"
+      ],
+      "module": "drivers",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "system_state",
+    "persistence"
+  ]
+}

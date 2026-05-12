@@ -1,0 +1,26 @@
+{
+  "artifact_id": "anydesk",
+  "display_name": "AnyDesk",
+  "category": "Remote Access & Lateral Movement",
+  "description": "AnyDesk remote access logs recording connection timestamps, remote IDs, and session details.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%APPDATA%\\AnyDesk\\ad_svc.trace",
+        "%PROGRAMDATA%\\AnyDesk\\ad_svc.trace",
+        "%APPDATA%\\AnyDesk\\connection_trace.txt"
+      ],
+      "module": "anydesk",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "lateral_movement",
+    "network_activity",
+    "user_activity"
+  ]
+}

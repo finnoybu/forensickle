@@ -1,0 +1,25 @@
+{
+  "artifact_id": "systemd_services",
+  "display_name": "Systemd Services",
+  "category": "Persistence & Autostart",
+  "description": "Linux systemd service unit files defining daemons and their startup configurations.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/etc/systemd/system/*.service",
+        "/usr/lib/systemd/system/*.service",
+        "~/.config/systemd/user/*.service"
+      ],
+      "module": "systemd_services",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

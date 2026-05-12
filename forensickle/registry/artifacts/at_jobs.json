@@ -1,0 +1,24 @@
+{
+  "artifact_id": "at_jobs",
+  "display_name": "At Jobs",
+  "category": "Persistence & Autostart",
+  "description": "Linux at job queue files scheduling one-time command execution at a specified time.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/spool/at/*",
+        "/var/spool/atjobs/*"
+      ],
+      "module": "at_jobs",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}

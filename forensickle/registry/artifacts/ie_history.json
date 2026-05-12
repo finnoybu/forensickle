@@ -1,0 +1,23 @@
+{
+  "artifact_id": "ie_history",
+  "display_name": "Internet Explorer History",
+  "category": "Browser & Web Activity",
+  "description": "Internet Explorer browsing history from WebCacheV01.dat including URLs and timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%LOCALAPPDATA%\\Microsoft\\Windows\\WebCache\\WebCacheV01.dat"
+      ],
+      "module": "ie_history",
+      "source_type": "ese_database"
+    }
+  },
+  "investigative_tags": [
+    "browser_activity",
+    "user_activity"
+  ]
+}

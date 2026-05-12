@@ -1,0 +1,25 @@
+{
+  "artifact_id": "logmein",
+  "display_name": "LogMeIn",
+  "category": "Remote Access & Lateral Movement",
+  "description": "LogMeIn remote access log files recording connection events and session activity.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%PROGRAMDATA%\\LogMeIn\\Logs\\*",
+        "%LOCALAPPDATA%\\LogMeIn\\Logs\\*"
+      ],
+      "module": "logmein",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "lateral_movement",
+    "network_activity",
+    "user_activity"
+  ]
+}

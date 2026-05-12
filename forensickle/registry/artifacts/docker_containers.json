@@ -1,0 +1,25 @@
+{
+  "artifact_id": "docker_containers",
+  "display_name": "Docker Containers",
+  "category": "Remote Access & Lateral Movement",
+  "description": "Docker container configuration, logs, and image metadata for running and stopped containers.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/lib/docker/containers/*/config.v2.json",
+        "/var/lib/docker/containers/*/*.log"
+      ],
+      "module": "docker_containers",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "network_activity",
+    "lateral_movement"
+  ]
+}

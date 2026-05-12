@@ -1,0 +1,24 @@
+{
+  "artifact_id": "install_log",
+  "display_name": "macOS Install Log",
+  "category": "Logs & Audit Trail",
+  "description": "macOS install.log recording software installation and update activity with timestamps.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "macos": {
+      "source_paths": [
+        "/var/log/install.log",
+        "/var/log/install.log.*"
+      ],
+      "module": "install_log",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "system_state"
+  ]
+}

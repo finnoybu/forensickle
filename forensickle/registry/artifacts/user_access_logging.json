@@ -1,0 +1,24 @@
+{
+  "artifact_id": "user_access_logging",
+  "display_name": "User Access Logging",
+  "category": "Authentication & Access",
+  "description": "Windows Server User Access Logging database tracking client access to server roles and services.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\LogFiles\\Sum\\*.mdb"
+      ],
+      "module": "user_access_logging",
+      "source_type": "ese_database"
+    }
+  },
+  "investigative_tags": [
+    "account_activity",
+    "lateral_movement",
+    "network_activity"
+  ]
+}

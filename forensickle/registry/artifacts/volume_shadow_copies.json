@@ -1,0 +1,24 @@
+{
+  "artifact_id": "volume_shadow_copies",
+  "display_name": "Volume Shadow Copies",
+  "category": "File System & Disk",
+  "description": "Windows Volume Shadow Copy Service snapshots providing point-in-time recovery of files and volumes.",
+  "can_parse": false,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 900,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%SYSTEMROOT%\\System32\\config\\RegBack\\*"
+      ],
+      "module": "volume_shadow_copies",
+      "source_type": "live_data"
+    }
+  },
+  "investigative_tags": [
+    "file_access",
+    "anti_forensics",
+    "system_state"
+  ]
+}

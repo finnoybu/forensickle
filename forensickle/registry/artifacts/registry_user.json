@@ -1,0 +1,25 @@
+{
+  "artifact_id": "registry_user",
+  "display_name": "Registry Hives (User)",
+  "category": "System Configuration",
+  "description": "Windows per-user registry hives (NTUSER.DAT, UsrClass.dat) containing user preferences and activity.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "server",
+  "timeout": 600,
+  "platforms": {
+    "windows": {
+      "source_paths": [
+        "%USERPROFILE%\\NTUSER.DAT",
+        "%LOCALAPPDATA%\\Microsoft\\Windows\\UsrClass.dat"
+      ],
+      "module": "registry_user",
+      "source_type": "registry_hive"
+    }
+  },
+  "investigative_tags": [
+    "configuration",
+    "user_activity",
+    "account_activity"
+  ]
+}

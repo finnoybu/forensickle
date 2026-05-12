@@ -1,0 +1,25 @@
+{
+  "artifact_id": "auditd",
+  "display_name": "Audit Daemon Logs",
+  "category": "Logs & Audit Trail",
+  "description": "Linux auditd logs recording security-relevant system events including syscalls and file access.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "/var/log/audit/audit.log",
+        "/var/log/audit/audit.log.*"
+      ],
+      "module": "auditd",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "execution",
+    "account_activity",
+    "file_access"
+  ]
+}

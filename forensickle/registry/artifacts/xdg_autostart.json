@@ -1,0 +1,24 @@
+{
+  "artifact_id": "xdg_autostart",
+  "display_name": "XDG Autostart",
+  "category": "Persistence & Autostart",
+  "description": "Linux XDG autostart desktop entries that launch applications on graphical session login.",
+  "can_parse": true,
+  "can_retain": true,
+  "parse_location": "client",
+  "timeout": 300,
+  "platforms": {
+    "linux": {
+      "source_paths": [
+        "~/.config/autostart/*.desktop",
+        "/etc/xdg/autostart/*.desktop"
+      ],
+      "module": "xdg_autostart",
+      "source_type": "file"
+    }
+  },
+  "investigative_tags": [
+    "persistence",
+    "execution"
+  ]
+}
