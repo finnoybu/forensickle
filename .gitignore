@@ -9,6 +9,9 @@ ez_amcache_output/
 .resources/
 *.hiv
 
+# Local AI assistant config (Claude Code)
+.claude/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
